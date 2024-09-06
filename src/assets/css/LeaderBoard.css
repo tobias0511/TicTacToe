@@ -1,0 +1,36 @@
+.leaderBoardContainer {
+    background-color: #374a6e;
+    padding: 3vh 8vh; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: fixed; 
+    bottom: 3.3vh; 
+    right: 3.8vh; 
+  }
+  
+  .leaderBoardContainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .playerX, .playerY {
+    background-color: #4a5a7e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 1.2vh;
+    margin-bottom: 1.9vh; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .playerX:hover, .playerY:hover {
+    background-color: #5a6a8e; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+  
+ 
