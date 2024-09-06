@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  font-family: sans-serif;
+  background-color: #26344a;
+  color: white;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.appContainer h1 {
+  margin-bottom: 5vh;
+}
+
+.appContainer h3 {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.hiddenButton {
+  visibility: hidden;
+  padding: 12px 24px; /* Also inserted here, that board doesn't "jump" when button gets visible*/
+}
+
+.playAgainButton {
+  background-color: #4caf50; /* Auffällige Farbe */
+  color: white; /* Kontrast zum Hintergrund */
+  padding: 12px 24px; /* Genügend Padding für bessere Klickbarkeit */
+  font-size: 16px; /* Lesbare Schriftgröße */
+  border: none; /* Keine standardmäßigen Button-Kanten */
+  border-radius: 5px; /* Abgerundete Ecken */
+  cursor: pointer; /* Zeigt an, dass der Button anklickbar ist */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.playAgainButton:hover {
+  background-color: #45a049; /* Dunklerer Farbton bei Hover */
+  transform: translateY(-2px); /* Leichtes Anheben */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+}
+
+.playAgainButton:active {
+  background-color: #3e8e41;
+  transform: translateY(0); /* Button senkt sich leicht ab */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

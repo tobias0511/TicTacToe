@@ -1,0 +1,15 @@
+.tileContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .25rem solid #829aab;
+    width: 15vh;
+    height: 15vh;
+    margin: .5vh;
+    cursor: pointer; /*noch so einstellen, dass es nur ein pointer ist, wenn tile leer (undefined) ist*/
+    font-size: 1.25rem;
+}
+
+
+
+
