@@ -6,6 +6,7 @@ interface LeaderBoardProps {
 
 export const LeaderBoard: React.FC<LeaderBoardProps> = ({ numberOfWins }) => {
   return <div className="leaderBoardContainer">
+    {/* <input type="text" /> */}
     <div className="playerX">
     
     {`Player X - ${numberOfWins.X} wins`} 

@@ -8,6 +8,8 @@ import { LeaderBoard } from "./components/LeaderBoard";
 
 function App() {
   // current symbol über props runtergeben
+  // wenn board voll aber gewinner wird board is full angezeigt
+  
 
   const [valueOfTiles, setValueOfTiles] = useState<("X" | "O" | undefined)[]>(
     Array(9).fill(undefined)
@@ -18,6 +20,9 @@ function App() {
     X: 0,
     O: 0,
   });
+  const [ai, setAI] = useState<boolean>(false)
+
+  
 
   const checkForWinner = (valueOfTiles: ("X" | "O" | undefined)[]) => {
     // Check for winner in column
@@ -114,12 +119,26 @@ function App() {
     setCurrentSymbol("X");
   };
 
+  const handleCheckboxChange = (event : any) => {
+    setAI(event.target.checked)
+    
+  }
+
+  console.log(ai)
+
   return (
+    
     <div className="appContainer">
+      {/* <label>Play Against AI</label>
+      <input type="checkbox"
+      checked ={ai}
+      onChange={handleCheckboxChange} /> */}
       
     <div className="leaderBoardWrapper">
+      
     <LeaderBoard numberOfWins={numberOfWins} />
     </div>
+    {/* <input type="number" /> */}
  
       
       
@@ -147,7 +166,7 @@ function App() {
         Play Again
       </button>
       </div>
-      
+     
  
   );
 }
