@@ -8,7 +8,6 @@ import { LeaderBoard } from "./components/LeaderBoard";
 
 function App() {
   // current symbol über props runtergeben
-  // wenn board voll aber gewinner wird board is full angezeigt
   
 
   const [valueOfTiles, setValueOfTiles] = useState<("X" | "O" | undefined)[]>(
@@ -20,9 +19,7 @@ function App() {
     X: 0,
     O: 0,
   });
-  const [ai, setAI] = useState<boolean>(false)
-
-  
+  const [ai, setAI] = useState<boolean>(false);
 
   const checkForWinner = (valueOfTiles: ("X" | "O" | undefined)[]) => {
     // Check for winner in column
@@ -119,29 +116,24 @@ function App() {
     setCurrentSymbol("X");
   };
 
-  const handleCheckboxChange = (event : any) => {
-    setAI(event.target.checked)
-    
-  }
+  const handleCheckboxChange = (event: any) => {
+    setAI(event.target.checked);
+  };
 
-  console.log(ai)
+  console.log(ai);
 
   return (
-    
     <div className="appContainer">
       {/* <label>Play Against AI</label>
       <input type="checkbox"
       checked ={ai}
       onChange={handleCheckboxChange} /> */}
-      
-    <div className="leaderBoardWrapper">
-      
-    <LeaderBoard numberOfWins={numberOfWins} />
-    </div>
-    {/* <input type="number" /> */}
- 
-      
-      
+
+      <div className="leaderBoardWrapper">
+        <LeaderBoard numberOfWins={numberOfWins} />
+      </div>
+      {/* <input type="number" /> */}
+
       <h1>Tic Tac Toe</h1>
       <Board
         onTileClick={handleTileClick}
@@ -149,10 +141,10 @@ function App() {
         currentSymbol={currentSymbol}
       />
       <h3>
-        {checkForFullBoard(valueOfTiles)
-          ? "The Board is full"
-          : winner
+        {winner
           ? `The winner is: ${winner}`
+          : checkForFullBoard(valueOfTiles)
+          ? "The Board is full"
           : `Player ${currentSymbol}`}
       </h3>
       <button
@@ -165,9 +157,7 @@ function App() {
       >
         Play Again
       </button>
-      </div>
-     
- 
+    </div>
   );
 }
 
